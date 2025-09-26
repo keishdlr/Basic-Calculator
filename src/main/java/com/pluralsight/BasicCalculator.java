@@ -17,14 +17,32 @@ public class BasicCalculator {
 
         double num2 = myScanner.nextDouble();
 
+        myScanner.nextLine(); // Buffer: eats the new line
+
         // Ask the user for the operator
-        System.out.println("Possible Calculations \n" + "(A) Add \n" + "(S) subtract \n" + "(M) Multiply \n" + "(D) Divide \n");
+        System.out.println("Possible Calculations \n" + "\t(A) Add \n" + "\t(S) subtract \n" + "\t(M) Multiply \n" + "\t(D) Divide \n");
+
+        //Store what action is chosen
         System.out.println("Please select and option");
+        String action = myScanner.nextLine();
+        double result; //initializing the variable
 
-        double result = num1 * num2;
-        System.out.println(num1 + " * " + num2 + " = " + result);
+        if (action.equals ("a")){
+             result = num1 + num2;
+            System.out.println(num1 + " + " + num2 + " = " + result);}
+            else if (action.equals("s")){
+             result = num1 - num2;
+            System.out.println(num1 + " - " + num2 + " = " + result);}
+            else if (action.equals("m")){
+             result = num1 * num2;
+            System.out.println(num1 + " * " + num2 + " = " + result);}
+            else if (action.equals("d")){
+             result = num1 / num2;
+            System.out.println(num1 + " / " + num2 + " = " + result);}
+            else{
+            System.out.println("Not an option: Try again");}
 
-
+        }
     }
 
-}
+
