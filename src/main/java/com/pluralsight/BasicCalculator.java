@@ -25,23 +25,26 @@ public class BasicCalculator {
         //Store what action is chosen
         System.out.println("Please select and option");
         String action = myScanner.nextLine();
-        double result; //initializing the variable
+        double result = 0; //initializing the variable
+        String operator = "";
 
         //if -else menu select
         if (action.equals ("a")){
              result = num1 + num2;
-            System.out.println(num1 + " + " + num2 + " = " + result);}
+            System.out.println(num1 + operator + num2 + " = " + result);}
             else if (action.equals("s")){
              result = num1 - num2;
-            System.out.println(num1 + " - " + num2 + " = " + result);}
+            System.out.println(num1 + operator + num2 + " = " + result);}
             else if (action.equals("m")){
              result = num1 * num2;
-            System.out.println(num1 + " * " + num2 + " = " + result);}
+            System.out.println(num1 + operator + num2 + " = " + result);}
             else if (action.equals("d")){
              result = num1 / num2;
-            System.out.println(num1 + " / " + num2 + " = " + result);}
+            System.out.println(num1 + operator + num2 + " = " + result);}
             else{
-            System.out.println("Not an option: Try again");}
+            System.out.println("Not a valid option: Try again");}
+
+        System.out.println(" The result of " + num1 + operator + num2 + " is " + result);
 
         }
     }
