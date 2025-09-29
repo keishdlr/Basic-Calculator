@@ -27,6 +27,7 @@ public class BasicCalculator {
         String action = myScanner.nextLine();
         double result; //initializing the variable
 
+        //if -else menu select
         if (action.equals ("a")){
              result = num1 + num2;
             System.out.println(num1 + " + " + num2 + " = " + result);}
